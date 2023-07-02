@@ -14,6 +14,6 @@ PureID/MM ++: Adds a constraint to perform constraints based on PureID/MM.
 
 BivRec-normal: Interest structured block is not used for multimodal feature extraction but uses some basic methods (e.g., concat, sum, attention) as supervisory signals for ID recommendation.
 
-Bivrec-noi: use 
+Bivrec-noi: use all blocks
 
 The code is still being sorted out. We'll put all five versions together as soon as possible.

@@ -1,15 +1,19 @@
 # BivRec
 In order to facilitate the follow-up work, we provide five versions of the code, respectively:
 
-Comi: Multiple interest recommendation model
+Comi: Multi-interest recommendation model including ComiRec, MIND, and other models.
 https://github.com/ShiningCosmos/pytorch_ComiRec.git
 
-PureID/MM: Use interest-structured modules and ID or multimodal information for recommendations
+PureID/MM: Use interest-structured blocks to extract either ID or multimodal features for recommendations, which is a single-side version of BivRec.
+Specifically, We also explored whether the interest-structured blocks can be stacked to connect larger models, where the information_passing function corresponds to four cases:
+together: Interest tokens and historical sequences pass together through the common transformer layer for pre-information propagation.
+self: The historical purchase sequence passes through the transformer layer separately
+Dual: The historical purchase sequence passes through the transformer separately and then spliced together through a transformer.
 
-PureID/MM+constraint: Adds a constraint to perform constraints
+PureID/MM ++: Adds a constraint to perform constraints based on PureID/MM.
 
-BivRec-normal: Interest structured module is not used for multi-mode feature extraction, but splicing and other methods are used as supervisory signals.
+BivRec-normal: Interest structured block is not used for multimodal feature extraction but uses some basic methods (e.g., concat, sum, attention) as supervisory signals for ID recommendation.
 
-Bivrec-noi: indicates BivRec
+Bivrec-noi: use 
 
-The code is being sorted out.
+The code is still being sorted out. We'll put all five versions together as soon as possible.
